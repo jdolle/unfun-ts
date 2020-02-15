@@ -1,6 +1,6 @@
 /**
  * @since 0.0.1
- * 
+ *
  * Helpers for Options
  */
 
@@ -11,9 +11,9 @@ import { throwError } from './util'
 
 /**
  * @since 0.0.1
- * 
+ *
  * Throws an error if the option evaluates to none
- * 
+ *
  * @param option Option to extract value from
  * @param onNone Lazy error to be thrown if the option evaluates to none,
  */
