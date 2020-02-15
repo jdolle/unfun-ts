@@ -17,12 +17,14 @@
     "typescript"
   ],
   "author": "Jeff Dolle <jeff@jeffdolle.com>",
+  "homepage": "https://jdolle.github.io/unfun-ts",
   "license": "MIT",
   "peerDependencies": {
     "fp-ts": "^2.0.0"
   },
   "devDependencies": {
     "@types/jest": "25.1.2",
+    "docs-ts": "^0.3.4",
     "fp-ts": "^2.0.0",
     "jest": "25.1.0",
     "prettier": "1.19.1",
