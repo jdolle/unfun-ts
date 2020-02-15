@@ -1,0 +1,62 @@
+version: 2.1
+orbs:
+  node-standard: acornsgrow/node-standard@3
+
+parameters:
+  cache-version:
+    type: string
+    default: v0
+  node-tag:
+    type: string
+    default: 12.13.1
+
+jobs:
+  format:
+    parameters:
+      executor:
+        type: executor
+    executor: <<parameters.executor>>
+    steps:
+      - checkout
+      - node-standard/install-dependencies:
+          cache-version: <<pipeline.parameters.cache-version>>
+      - run: yarn format:check
+
+workflows:
+  Dev:
+    jobs:
+      - node-standard/install-dependencies:
+          executor:
+            name: node-standard/node
+            tag: <<pipeline.parameters.node-tag>>
+          cache-version: <<pipeline.parameters.cache-version>>
+      - format:
+          executor:
+            name: node-standard/node
+            tag: <<pipeline.parameters.node-tag>>
+          requires:
+            - node-standard/install-dependencies
+      - node-standard/install-codeclimate
+      - node-standard/build:
+          requires:
+            - node-standard/install-dependencies
+          executor:
+            name: node-standard/node
+            tag: <<pipeline.parameters.node-tag>>
+          cache-version: <<pipeline.parameters.cache-version>>
+          persist-glob: lib
+      - node-standard/test-with-coverage:
+          requires:
+            - node-standard/install-dependencies
+            - node-standard/install-codeclimate
+          executor:
+            name: node-standard/node
+            tag: <<pipeline.parameters.node-tag>>
+          test-script: test --maxWorkers=1 --coverage
+          parallelism: 1
+          cache-version: <<pipeline.parameters.cache-version>>
+          files: tests/**/*.ts
+      - node-standard/upload-coverage:
+          requires:
+            - node-standard/test-with-coverage
+          store-artifact: true

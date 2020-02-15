@@ -1,6 +1,6 @@
 /**
  * @since 0.0.1
- * 
+ *
  * Helpers for TaskEithers
  */
 

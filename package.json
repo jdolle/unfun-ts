@@ -9,7 +9,8 @@
     "typecheck": "tsc -b",
     "clean": "rimraf lib/*",
     "prebuild": "yarn clean",
-    "format": "prettier --write {tests,mocks,src}/**/*.ts"
+    "format": "prettier --write \"{tests,mocks,src}/**/*.ts\"",
+    "format:check": "prettier --check \"{tests,mocks,src}/**/*.ts\""
   },
   "keywords": [
     "fp-ts",
