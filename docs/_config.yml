@@ -6,4 +6,4 @@ search_enabled: true
 # Aux links for the upper right navigation
 aux_links:
   'unfun-ts on GitHub':
-    - 'https://jdolle.github.io/unfun-ts'
+    - 'https://github.com/jdolle/unfun-ts'

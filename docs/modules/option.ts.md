@@ -1,10 +1,10 @@
 ---
-title: option/index.ts
+title: option.ts
 nav_order: 3
 parent: Modules
 ---
 
-# index overview
+# option overview
 
 Added in v0.0.1
 

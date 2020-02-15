@@ -1,10 +1,10 @@
 ---
-title: taskEither/index.ts
+title: taskEither.ts
 nav_order: 4
 parent: Modules
 ---
 
-# index overview
+# taskEither overview
 
 Added in v0.0.1
 

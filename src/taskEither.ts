@@ -7,7 +7,7 @@
 import * as TE from 'fp-ts/lib/TaskEither'
 import * as T from 'fp-ts/lib/Task'
 import { pipe } from 'fp-ts/lib/pipeable'
-import { throwError } from '../util'
+import { throwError } from './util'
 
 /**
  * @since 0.0.1

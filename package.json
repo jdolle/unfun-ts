@@ -17,7 +17,7 @@
     "typescript"
   ],
   "author": "Jeff Dolle <jeff@jeffdolle.com>",
-  "homepage": "https://jdolle.github.io/unfun-ts",
+  "homepage": "https://github.com/jdolle/unfun-ts",
   "license": "MIT",
   "peerDependencies": {
     "fp-ts": "^2.0.0"
