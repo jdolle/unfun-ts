@@ -23,9 +23,7 @@ Helpers for IOEithers
 **Signature**
 
 ```ts
-export function toThrowingIO<E, A>(
-  ioe: IOE.IOEither<E, A>,
-): IO.IO<A> { ... }
+export function toThrowingIO<E, A>(ioe: IOE.IOEither<E, A>): IO.IO<A> { ... }
 ```
 
 Added in v0.0.1

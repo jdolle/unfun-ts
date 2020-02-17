@@ -5,7 +5,7 @@ orbs:
 parameters:
   cache-version:
     type: string
-    default: v0
+    default: v1
   node-tag:
     type: string
     default: 12.13.1
@@ -44,7 +44,6 @@ workflows:
             name: node-standard/node
             tag: <<pipeline.parameters.node-tag>>
           cache-version: <<pipeline.parameters.cache-version>>
-          persist-glob: lib
       - node-standard/test-with-coverage:
           requires:
             - node-standard/install-dependencies
