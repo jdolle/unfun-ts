@@ -1,6 +1,6 @@
 {
   "name": "unfun-ts",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Practical helpers to unfunctionalize fp-ts types",
   "main": "lib/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "clean": "rimraf lib/*",
     "prebuild": "yarn clean",
     "format": "prettier --write \"{tests,mocks,src}/**/*.ts\"",
-    "format:check": "prettier --check \"{tests,mocks,src}/**/*.ts\""
+    "format:check": "prettier --check \"{tests,mocks,src}/**/*.ts\"",
+    "docs": "docs-ts"
   },
   "keywords": [
     "fp-ts",

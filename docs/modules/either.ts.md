@@ -1,10 +1,10 @@
 ---
-title: either.ts
+title: Either.ts
 nav_order: 1
 parent: Modules
 ---
 
-# either overview
+# Either overview
 
 Added in v0.0.1
 

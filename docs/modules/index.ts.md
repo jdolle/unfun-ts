@@ -12,39 +12,50 @@ Added in v0.0.1
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [either](#either)
-- [option](#option)
-- [taskEither](#taskeither)
+- [Either](#either)
+- [IOEither](#ioeither)
+- [Option](#option)
+- [TaskEither](#taskeither)
 - [util](#util)
 
 ---
 
-# either
+# Either
 
 **Signature**
 
 ```ts
-typeof either
+typeof Either
 ```
 
 Added in v0.0.1
 
-# option
+# IOEither
 
 **Signature**
 
 ```ts
-typeof option
+typeof IOEither
+```
+
+Added in v1.0.0
+
+# Option
+
+**Signature**
+
+```ts
+typeof Option
 ```
 
 Added in v0.0.1
 
-# taskEither
+# TaskEither
 
 **Signature**
 
 ```ts
-typeof taskEither
+typeof TaskEither
 ```
 
 Added in v0.0.1
