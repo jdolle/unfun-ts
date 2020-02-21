@@ -12,6 +12,8 @@ import { throwError } from './util'
 /**
  * @since 0.0.1
  * Converts a TaskEither to a Task. If the TaskEither is a left, this task will throw the left value.
+ *
+ * @param taskEither
  */
 export function toThrowingTask<E, A>(
   taskEither: TE.TaskEither<E, A>,
