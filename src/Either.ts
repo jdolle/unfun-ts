@@ -13,11 +13,11 @@ import { throwError } from './util'
  * @since 0.0.1
  *
  * Throws the left value if the either is a left, otherwise retuns the right value
- *
- * @param either Either to extract value from
  */
-export function getOrThrow<E, A>(either: E.Either<E, A>): A {
-  return pipe(either, E.fold(throwError, identity))
+export function getOrThrow<E, A>() {
+  return (either: E.Either<E, A>): A => {
+    return pipe(either, E.fold(throwError, identity))
+  }
 }
 
 /**

@@ -24,7 +24,7 @@ Helpers for Eithers
 **Signature**
 
 ```ts
-export function getOrThrow<E, A>(either: E.Either<E, A>): A { ... }
+export function getOrThrow<E, A>() { ... }
 ```
 
 Added in v0.0.1
