@@ -14,3 +14,14 @@ describe('getOrThrow', () => {
     ).toThrowErrorMatchingInlineSnapshot(`"Kaput"`)
   })
 })
+
+describe('toTuple', () => {
+  it('should return an array [undefined, right] when passed a Right', () => {
+    expect(Either.toTuple(E.right('success'))).toEqual([undefined, 'success'])
+  })
+
+  it('should return an array [left, undefined] when passed a Left', () => {
+    const err = new Error('Kaput')
+    expect(Either.toTuple(E.left(err))).toEqual([err, undefined])
+  })
+})
