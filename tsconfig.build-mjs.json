@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "target": "ES2015",
+    "outDir": "./mjs",
+    "module": "ES2015"
+  }
+}
