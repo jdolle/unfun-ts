@@ -13,3 +13,22 @@ Functional programming is powerful, but not always the most practical. This pack
 yarn add unfun-ts
 yarn add fp-ts@^2.0.0
 ```
+
+## Usage
+
+```ts
+import * as UE from "unfun-ts/lib/Either";
+import * as E from "fp-ts/lib/Either";
+import { pipe } from "fp-ts/lib/pipeable";
+
+// const nullyValue: undefined | number;
+try {
+  const value = pipe(
+    nullyValue,
+    E.fromNullable("nully"),
+    UE.getOrThrow(),
+  );
+} catch (bad) {
+  console.error(`The value was ${bad}`);
+}
+```
