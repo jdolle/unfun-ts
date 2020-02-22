@@ -1,26 +1,28 @@
 {
   "name": "unfun-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Practical helpers to unfunctionalize fp-ts types",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
     "build": "tsc -b tsconfig.build.json",
+    "build:mjs": "tsc -b tsconfig.build-mjs.json",
     "typecheck": "tsc -b",
-    "clean": "rimraf lib/*",
-    "prebuild": "yarn clean",
+    "clean": "rimraf lib/* && rimraf mjs/*",
     "format": "prettier --write \"{tests,mocks,src}/**/*.ts\"",
     "format:check": "prettier --check \"{tests,mocks,src}/**/*.ts\"",
-    "docs": "docs-ts"
+    "docs": "docs-ts",
+    "prepublish": "yarn clean && yarn build && yarn build:mjs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn docs && yarn lint-staged",
+      "pre-commit": "yarn lint-staged",
       "pre-push": "yarn typecheck && yarn test"
     }
   },
   "lint-staged": {
     "*.ts": [
+      "yarn docs",
       "yarn format"
     ]
   },
@@ -37,11 +39,11 @@
   },
   "devDependencies": {
     "@types/jest": "25.1.2",
-    "docs-ts": "^0.3.4",
+    "docs-ts": "0.3.4",
     "fp-ts": "^2.0.0",
-    "husky": "^4.2.3",
+    "husky": "4.2.3",
     "jest": "25.1.0",
-    "lint-staged": "^10.0.7",
+    "lint-staged": "10.0.7",
     "prettier": "1.19.1",
     "rimraf": "3.0.2",
     "ts-jest": "25.1.0",
