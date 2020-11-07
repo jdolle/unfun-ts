@@ -1,6 +1,6 @@
 {
   "name": "unfun-ts",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Practical helpers to unfunctionalize fp-ts types",
   "main": "lib/index.js",
   "scripts": {
